@@ -2,45 +2,29 @@ plugins {
     id 'java'
     id 'application'
     id 'checkstyle'
-    id 'jacoco'
 }
 
-group 'hexlet.code'
-version '1.0-SNAPSHOT'
-
-compileJava {
-    options.release = 20
-}
-
-run {
-    standardInput = System.in
-}
-
+group = 'hexlet.code'
+version = '1.0-SNAPSHOT'
 application {
-    mainClass = 'hexlet.code.App'
+    mainClassName = 'hexlet.code.App'
 }
-
-jacocoTestReport {
-    //dependsOn test // tests are required to run before generating the report
-    reports {
-        xml.required = true
-    }
-}
-
 repositories {
     mavenCentral()
 }
 
+
 dependencies {
-    implementation 'info.picocli:picocli:4.7.0'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.2'
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.assertj:assertj-core:3.22.0'
+    implementation 'info.picocli:picocli:4.7.5'
+    implementation 'org.json:json:20230618'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.13.0'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
+
 }
 
 test {
     useJUnitPlatform()
-    //finalizedBy jacocoTestReport // report is always generated after tests run
 }
