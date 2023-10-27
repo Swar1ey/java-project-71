@@ -29,7 +29,7 @@ public class Differ {
         mixed.putAll(after);
 
         StringBuilder result = new StringBuilder();
-        result.append("{ \n");
+        result.append("{\n");
         mixed.keySet()
                 .forEach(i -> {
                     if (!after.containsKey(i)) {
@@ -45,7 +45,7 @@ public class Differ {
                         result.append(" + " + i + ": " + after.get(i) + "\n");
                     }
                 });
-        result.append("}\n");
+        result.append("}");
 
         return result.toString();
     }
