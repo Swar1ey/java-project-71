@@ -26,26 +26,43 @@ public class App implements Callable<Integer> {
     @Option(names = {"V", "--version"}, versionHelp = true,
             description = "Print version information and exit.")
     private boolean versionRequested;
+
     @Override
     public Integer call() throws Exception {
         try {
-            System.out.println(Differ.generate(filepath1, filepath2));
+            String extension1 = getFileExtension(filepath1);
+            String extension2 = getFileExtension(filepath2);
+
+            if ("json".equals(extension1) && "json".equals(extension2)) {
+                System.out.println(Differ.generate(filepath1, filepath2));
+            } else if (("yaml".equals(extension1) || "yml".equals(extension1)) &&
+                    ("yaml".equals(extension2) || "yml".equals(extension2))) {
+                System.out.println(Parser.generate(filepath1, filepath2));
+            } else {
+                throw new RuntimeException("Unsupported file format");
+            }
         } catch (Exception e) {
             e.printStackTrace();
             return 1;
         }
         return 0;
     }
+
+    private String getFileExtension(String filepath) {
+        int lastDotIndex = filepath.lastIndexOf(".");
+        if (lastDotIndex == -1) {
+            throw new RuntimeException("Invalid file path: " + filepath);
+        }
+        return filepath.substring(lastDotIndex + 1);
+    }
+
     public static void main(String[] args) throws IOException {
         App app = CommandLine.populateCommand(new App(), args);
         if (app.helpRequested) {
-            CommandLine.usage(new App(), System.out);
-        } else if (filepath1 != null && filepath2 != null) {
-            int exitCode = new CommandLine(new App()).execute(args);
-            System.exit(exitCode);
+                int exitCode = new CommandLine(new App()).execute(args);
+                System.exit(exitCode);
         }
-
-
     }
 
 }
+
