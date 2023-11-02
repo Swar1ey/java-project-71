@@ -5,7 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93f38aef-0c2a-4005-9ec4-255ae9a1b801" name="Changes" comment="add jacoco plugin">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/DifferBuild.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Formatter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatter/Json.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatter/Plain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/formatter/Stylish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/file1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/file1.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/file2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/file2.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/json.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/plain.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/resources/stylish.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/app/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/filepath1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/filepath1.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/filepath2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/filepath2.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Differ.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Differ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/DifferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/DifferTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/resources/expect.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
