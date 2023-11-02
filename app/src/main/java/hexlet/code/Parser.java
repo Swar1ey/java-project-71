@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,7 +14,7 @@ import java.util.TreeMap;
 
 public class Parser {
 
-    public static Map<String, Object> readFile(String filePath) throws IOException {
+    public static Map<String, Object> readFile(String filePath) throws Exception {
         var normalizePath = normalizePath(filePath);
         var format = getFormat(filePath);
 
@@ -24,7 +23,7 @@ public class Parser {
         return Parser.parse(content, format);
     }
 
-    public static TreeMap<String, Object> parse(String content, String format) throws IOException {
+    public static TreeMap<String, Object> parse(String content, String format) throws Exception {
         ObjectMapper objectmapper = chooseFormat(format);
         return objectmapper.readValue(content, new TypeReference<>() { });
     }
