@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := build-run
 
 setup:
-	gradle wrapper --gradle-version 8.3
+	./gradlew wrapper --gradle-version 8.4
 
 clean:
 	./gradlew clean
@@ -13,7 +13,7 @@ install:
 	./gradlew clean install
 
 run-dist:
-	@./build/install/app/bin/app
+	./build/install/java-package/bin/java-package
 
 run:
 	./gradlew run
